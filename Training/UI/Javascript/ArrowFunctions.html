@@ -1,0 +1,13 @@
+<script>
+    let age=parseInt(prompt("Age of the person"))
+    let msg=() => alert("Hello");
+    let sum= (n1,n2) => document.write(n1+n2);
+
+    let check_age=(age<18)?     
+                   ()=> alert("Minor"):
+                   ()=> alert("Major");
+
+    msg(); //without parameters
+    sum(23,45); //with paremeters
+    check_age() //function with conditional operator
+</script>

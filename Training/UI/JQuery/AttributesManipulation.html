@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Example of JQuery</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="jquery-3.6.0.js"></script>
+        <script>
+            $(document).ready(function()
+            {
+                $('#btn1').click(function()
+                {
+                    alert($('div').attr('class'));
+                    alert($('#div1').html())  
+                    alert($('input:text').val())
+                })
+                $('#btn2').click(function()
+                {
+                    var style=$('p').prop('style');
+                    alert(style.fontWeight);
+
+                })
+                $('div').attr('class','blueDiv');
+
+            });
+        </script>
+        <style>
+            .blueDiv
+            {
+                background-color: steelblue;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Attributes Manipulation Example</h1>
+        <button id="btn1">Div</button>
+        <button id="btn2">Paragraph</button>
+        <div>Division</div>
+        <p style="font-size: medium; font-weight: bold;">Paragraph</p>
+        <div id="div1" class="blueDiv">
+            <p style="font-size: x-large; font-weight: bolder;">
+            This is a pragraph in the division
+            </p>
+        </div>
+        <div>
+            <label>Name:</label>
+            <input type="text"/>
+        </div>
+    </body>
+</html>

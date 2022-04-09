@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.jocata.las.TcllasApplicationTests&apos; to &apos;TcllasApplication&apos;&#x0A;- Original project: &apos;TCLLAS&apos;&#x0A;- Original element: &apos;com.jocata.las.TcllasApplicationTests&apos;&#x0A;- Renamed element: &apos;com.jocata.las.TcllasApplication&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;TcllasApplicationTests&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/test\/java=/optional=/true=/=/maven.pomderived=/true=/=/test=/true=/&lt;com.jocata.las{TcllasApplicationTests.java[TcllasApplicationTests" matchStrategy="1" name="TcllasApplication" qualified="false" references="true" similarDeclarations="false" stamp="1648572045516" textual="false" version="1.0"/>
+</session>

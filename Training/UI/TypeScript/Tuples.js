@@ -1,0 +1,15 @@
+var id = 101;
+var name1 = "Steven";
+console.log(id + " " + name1);
+var emp = [101, "Steve"];
+var emp;
+emp = [101, "Steve"];
+console.log(emp);
+var employees;
+employees = [[1, "emp1"], [2, "emp2"], [3, "emp3"]];
+console.log(employees[0]);
+console.log(employees);
+employees.pop();
+console.log(employees);
+emp.push(4, "emp4");
+console.log(emp);

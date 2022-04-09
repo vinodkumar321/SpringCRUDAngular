@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <style>
+             .text-success {
+                 color:green;
+             }
+
+             .text-primary{
+                 color:blue;
+             }
+
+             .text-danger{
+                 color:red;
+             }             
+
+             .text-warning {
+                 color:pink;
+             }
+       </style>
+   </head> 
+<body>
+<h1 align="center">Structural Directives </h1>
+<div [ngStyle]="{'font-size.px':24}">
+   <p>* sign</p>
+   <p>Used to manipulate or change structure of DOM elements</p>
+   <p>Here Peoples Listed with their names and age have age </p>
+    <ul *ngFor="let person of people">
+       <li> {{ person.name }} ({{ person.age }}) </li>
+      </ul>
+      <br>
+   </div>   
+<h2>NgIf Directive and ngFor</h2>
+<div [ngStyle]="{'font-size.px':24}">
+    <p>Here Peoples Listed with their names and age > 30</p>
+    <ul *ngFor="let person of people">
+        <li *ngIf="person.age > 30">
+        {{ person.name }} ({{ person.age }})<br>
+        {{person.country}}
+        </li>
+      </ul>
+      <br>
+      <p>Here Peoples Listed with their names and age have age < 30</p>
+    <ul *ngFor="let person of people">
+        <li *ngIf="person.age < 30">
+        {{ person.name }} ({{ person.age }})
+        <br>{{person.country}}
+        </li>
+      </ul>
+      <br>
+</div>
+
+<h2>NgSwitch Directive</h2>
+<div [ngStyle]="{'font-size.px':24}" >
+    <p>Let’s imagine we wanted to print peoples names in different colours depending on where they are from. Green for UK, Blue for USA, Red for HK.</p>
+    <ul *ngFor="let person of people"
+    [ngSwitch]="person.country"> 
+
+  <li *ngSwitchCase="'UK'"
+      class="text-success">{{ person.name }} ({{ person.country }})
+  </li>
+  <li *ngSwitchCase="'USA'"
+      class="text-primary">{{ person.name }} ({{ person.country }})
+  </li>
+  <li *ngSwitchCase="'HK'"
+      class="text-danger">{{ person.name }} ({{ person.country }})
+  </li>
+  <li *ngSwitchDefault
+      class="text-warning">{{ person.name }} ({{ person.country }})
+  </li>
+</ul>
+</div>
+
+</body>
+</html>

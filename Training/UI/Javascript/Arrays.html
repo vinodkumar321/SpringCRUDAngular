@@ -1,0 +1,26 @@
+<script>
+    document.write("<h2>Array as Literal</h2>")
+    var student=["sita","rita","rosy"];
+    for(i=0;i<student.length;i++)
+    {
+        document.write(student[i]+"<br>");
+    }
+
+    document.write("<h2>Instance of Array</h2>")
+    var student=new Array();
+    student[0]="Ram";
+    student[1]="Shyam";
+    student[2]="Sundar";
+    for(i=0;i<student.length;i++)
+    {
+        document.write(student[i]+"<br>");
+    }
+    
+    document.write("<h2>Array Constructor</h2>")
+    var student=new Array("Sun","Mon","Tue");
+    for(i=0;i<student.length;i++)
+    {
+        document.write(student[i]+"<br>");
+    }
+
+</script>

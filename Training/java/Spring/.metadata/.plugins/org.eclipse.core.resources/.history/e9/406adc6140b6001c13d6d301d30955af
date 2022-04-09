@@ -1,0 +1,14 @@
+package com.jocata.tcl.dataloader.service;
+
+import org.springframework.stereotype.Component;
+
+//import com.jocata.tcl.utils.request.CustomerDetailsRequestResponse;
+import com.jocata.tcl.dataloader.utils.request;
+
+@Component
+public interface CustomerDetailsService {
+	public CustomerDetailsRequestResponse saveCustomerDetails(CustomerDetailsRequestResponse request);
+	public CustomerDetailsRequestResponse updateCustomerDetails(CustomerDetailsRequestResponse request);
+	
+	public CustomerDetailsRequestResponse getCustomerDetails(Integer appId);
+}

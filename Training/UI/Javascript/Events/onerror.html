@@ -1,0 +1,9 @@
+<script>
+    let script=document.createElement('script');
+    script.src="https://google.com";
+    document.head.append(script);
+    script.onerror=function()
+    {
+        alert("Error Loading"+this.src)
+    };
+</script>

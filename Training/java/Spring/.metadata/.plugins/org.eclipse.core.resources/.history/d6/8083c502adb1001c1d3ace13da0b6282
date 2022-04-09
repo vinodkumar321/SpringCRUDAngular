@@ -1,0 +1,50 @@
+package com.jocata.las.controller;
+
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.request;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.jocata.las.entity.CustomerDetails;
+import com.jocata.las.repository.CustomerRepository;
+import com.jocata.las.request.CustomerDetailsRequestResponse;
+import com.jocata.las.service.CustomerDetailsService;
+
+@RestController
+public class CustomerDetailsController {
+	
+	@Autowired
+	CustomerDetailsService customerService;
+	
+	@PostMapping("/saveCustomerDetails")
+	@CrossOrigin(origins = "http://localhost:4200")
+	public ResponseEntity<?> saveCustomerDetails(@RequestBody CustomerDetailsRequestResponse request){
+	
+		request = customerService.saveCustomerDetails(request);	//response contains new PK
+		
+		return new ResponseEntity<CustomerDetailsRequestResponse>(request, HttpStatus.ACCEPTED);
+	}
+
+	@GetMapping("/getCustomerDetailsByCustomerId/{id}")
+	@CrossOrigin(origins = "http://localhost:4200")
+	public ResponseEntity<?> getCustomerDetails(@PathVariable(value = "id") Integer Id){
+	    this.customerService.getCustomerDetails(Id);		
+		return new ResponseEntity<CustomerDetailsRequestResponse>(request, HttpStatus.ACCEPTED);
+	} 
+	
+	
+	@GetMapping("/getCustomerDetailsAll")
+	@CrossOrigin(origins = "http://localhost:4200")
+	public List<CustomerDetails> getCustomerDetailsAll(){
+		  return this.customerService.getCustomerDetailsAll(); 
+	  } 
+}

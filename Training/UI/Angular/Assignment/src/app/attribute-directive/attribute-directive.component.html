@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <style>
+           .text-red { 
+                      color:red;
+                        }       
+            .text-yellow { 
+                        color:yellow;
+                    }
+       </style>
+   </head> 
+<body>
+<h1 align="center">Attribute Directives Component</h1>
+<h2>NgStyle Directive</h2>
+<div>
+    <p>The NgStyle directive lets you set a given DOM elements style properties. in this applied ng-style attribute to set font-size:24px</p></div>
+
+<div [ngStyle]="{'background-color':'yellow'}">
+    <p>The NgStyle directive lets you set a given DOM elements style properties. in thia applied ng-style attribute to set background-color</p>
+</div>
+<h2>NgClass Directive</h2>
+<div [ngStyle]="{'font-size.px':24}" >
+    <p>The NgClass directive allows you to set the CSS class dynamically for a DOM element.</p>
+</div>
+
+<h1 [ngClass]="{'text-red': true, 'text-yellow': false}"> Some Text... Based on attribute value either it is red or yellow</h1>
+
+</body>
+</html>

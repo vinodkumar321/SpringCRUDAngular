@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<center>
+	<h1>Welcome to Intranet Mailing System</h1> <hr/>
+	<h2>User Registration</h2>
+	<form action="DispatcherServlet" method="POST">
+	<!-- extra info passed to server in hidden mode.. hidden form fileds -->
+		<input type="hidden" name="action" value="registration" /> 
+		
+		User Name: <input type="text" name="username" id="username" /><br/>
+		Password: <input type="password" name="password" id="password" /> <br/>
+		Name: <input type="text" name="name" id="name" /><br/>
+		Email Id: <input type="text" name="emailid" id="emailid" /> <br/>
+		Mobile Number: <input type="number" name="mobileNumber" id="mobileNumber" /> <br/>
+		<input type="submit" name="submit" value="Register Me" />		
+	</form>
+	<h3>Already Registered? Login <a href="login.html"> here</a> </h3>
+</center>
+</body>
+</html>

@@ -1,0 +1,14 @@
+package com.jocata.las.service;
+
+import org.springframework.stereotype.Component;
+
+import com.jocata.las.request.CustomerDetailsRequestResponse;
+
+@Component
+public interface CustomerDetailsService {
+	public CustomerDetailsRequestResponse saveCustomerDetails(CustomerDetailsRequestResponse request);
+	public CustomerDetailsRequestResponse updateCustomerDetails(CustomerDetailsRequestResponse request);
+	
+	public CustomerDetailsRequestResponse getCustomerDetails(Integer appId);
+	public List<CustomerDetailsRequestResponse> getCustomerDetailsAll();
+}

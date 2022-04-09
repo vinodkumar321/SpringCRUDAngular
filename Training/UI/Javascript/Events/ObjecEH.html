@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<body>
+    <button id="ele" >Click</button>
+    <script>
+        // let obj={
+        //     handleEvent(event)
+        //     {
+        //         alert(event.type + " at "+ event.currentTarget)
+        //     }
+        // };
+        // ele.addEventListener("click",obj)
+
+        class Menu
+        {
+            handleEvent(event)
+            {
+                let method='on' + event.type[0].toUpperCase()+event.type.slice(1);
+                this[method](event);
+            }
+            onMousedown()
+            {
+                ele.innerHTML="Mouse button pressed";
+            }
+            onMouseup()
+            {
+                ele.innerHTML +=" ... and released";
+            }
+        }
+        let menu=new Menu();
+        ele.addEventListener('mousedown',menu);
+        ele.addEventListener('mouseup',menu);
+    </script>
+</body>

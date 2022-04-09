@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html><head>
+    <link rel="stylesheet" href="bubble.css">
+</head>
+
+<body onclick="alert('Bubbling dosent work here')">
+    <button onclick="event.stopPropagation()">Click</button>
+Click to display 
+<code>event.target</code> and <code> this   </code> to compare
+     <form onclick="alert('form')" id="form">FORM
+        <div onclick="alert('div')">DIV
+            <p onclick="alert('p')">P
+             </p>
+             </div>
+             </form>   
+             <script src="bubbling.js"></script>
+</body>
+</html>

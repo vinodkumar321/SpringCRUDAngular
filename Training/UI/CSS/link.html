@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>Styling different link states</title>
+    <style>
+        /*Unvisited Link*/
+        a:link {
+            color: red;
+            text-decoration: none;
+            border-bottom: 1px solid;
+        }
+
+        /*Visited Link*/
+        a:visited {
+            color: #00ff00;
+        }
+
+        /*Mouse over Link*/
+        a:hover {
+            color: #0000ff;
+            border-bottom: none;
+        }
+
+        /*active Link*/
+        a:active {
+            color: #00ffff;
+        }
+    </style>
+</head>
+<body>
+    <p><a href="https://gmail.com" target="_top">Visit the link to check Inline CSS</a></p>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Example of JQuery</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="jquery-3.6.0.js"></script>
+        <script>
+            $(document).ready(function()
+            {
+            // selector pattern by name
+            $("button").click(function()
+               {
+            $("p").text("Paragraph usage in jquery");
+               });
+            // selector pattern by id
+            $('#div1').append('This element\'s id is "div"'); 
+            $('[class="class1"]').append('This element\'s class name is "class1"'); 
+            });
+            </script>
+    </head>
+    <body>
+        <h1 align="center">JQuery Example</h1>
+        <hr>
+        <p>Paragraph is not yet loaded</p>
+        <button type="button">Replace Text</button>
+        <hr>
+        <div id="div1"></div>
+        <div id="div2" class="class1"></div>
+    </body>
+</html>

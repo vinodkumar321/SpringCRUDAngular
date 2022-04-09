@@ -1,0 +1,15 @@
+var num1 = 123456;
+var binary = 57;
+var octal;
+var hexa;
+console.log(num1);
+console.log(num1.toExponential(1));
+var num2 = 10667.2345;
+console.log(num2.toFixed(1));
+console.log(num2.toLocaleString('de-DE'));
+console.log(num2.toPrecision(1));
+console.log(num1.toString(2));
+var num3 = new Number(123);
+console.log(num3);
+console.log(num3.valueOf());
+console.log(typeof num3);

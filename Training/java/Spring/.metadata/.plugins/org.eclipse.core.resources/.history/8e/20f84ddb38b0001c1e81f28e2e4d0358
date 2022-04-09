@@ -1,0 +1,68 @@
+package com.jocata.las.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.jocata.las.request.CustomerDetailsRequestResponse;
+import com.jocata.las.service.CustomerDetailsService;
+
+@RestController
+@CrossOrigin(origins = "http://localhost:4200")
+@RequestMapping("/api")
+public class CustomerDetailsController {
+	
+	@Autowired
+	CustomerDetailsService customerService;
+	/*
+	@Autowired
+	CreateLeadService createLeadService;
+	*/
+	@PostMapping("/saveCustomerDetails")
+	public ResponseEntity<?> saveCustomerDetails(@RequestBody CustomerDetailsRequestResponse request){
+	
+		CustomerDetailsRequestResponse response= request; //pass/assing the ref
+		response = customerService.saveCustomerDetails(request);	//response contains new PK
+		
+		//call createLead with the saved Details -> get the lead id generated and set to request
+	/*	CreateLeadRequest leadRequest = new CreateLeadRequest();
+		leadRequest.setRefId(response.getAppId()+"_"+new Date().getTime());	
+		leadRequest.setFirstName(response.getFirstname());
+		leadRequest.setMiddleName(response.getMiddlename());
+		leadRequest.setLastName(response.getLastname());
+		leadRequest.setMobileNo(response.getMobilenumber());
+		leadRequest.setEmailId(response.getPersonalemail());
+		leadRequest.setPincode(response.getPincode());
+		leadRequest.setCity(response.getKyccity());
+		leadRequest.setState(response.getKycstate());
+		leadRequest.setPan(response.getPannumber());
+		leadRequest.setSource("email");
+		leadRequest.setSubsource("email");
+		leadRequest.setProduct("LOAN AGAINST SHARE");
+		
+		
+		CreateLeadResponse leadResponse = createLeadService.createLead(leadRequest);
+		if(leadResponse !=null) {
+			response.setLeadid(leadResponse.getlAS_Create_Lead_SFDC().getLeadId());
+			response = customerService.updateCustomerDetails(response);
+			//response.setLeadid(leadResponse.getlAS_Create_Lead_SFDC().getLeadId());
+		}
+		
+		*/
+		return new ResponseEntity<CustomerDetailsRequestResponse>(response, HttpStatus.ACCEPTED);
+	}
+	
+	@GetMapping("/getCustomerDetails")
+	public ResponseEntity<?> getCustomerDetails(@RequestBody CustomerDetailsRequestResponse request){
+	
+		request = customerService.getCustomerDetails(request.getAppId());		
+		return new ResponseEntity<CustomerDetailsRequestResponse>(request, HttpStatus.ACCEPTED);
+	}
+	
+}

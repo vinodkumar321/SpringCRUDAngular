@@ -1,0 +1,47 @@
+<!-- <div id="ele">
+    <div id="ele-content">Element</div>
+</div> -->
+<!-- <ul>
+    <li>one</li>
+    <li>two</li>
+</ul>
+<ul>
+    <li>three</li>
+    <li>four</li>
+</ul> -->
+
+<a href="http://google.com">Google Website</a>
+<a href="http://yahoo.co.in]">Yahoo Website</a>
+<h1>Courses</h1> 
+<div class="contents">
+    <ul class="UI">
+        <li class="html">Lists</li>
+        <li class="html">Tables</li>s</li>
+    </ul>
+</div>   
+<script>
+    //getElementById
+// let element=document.getElementById('ele');
+    // element.style.background="brown";
+    
+    //querySelectorAll
+    // let elements=document.querySelectorAll('ul > li:last-child')
+    // for(let ele of elements)
+    // {
+    //     alert(ele.innerHTML)
+    // }
+
+    //querySelector
+    for(let ele of document.body.children)
+        if(ele.matches('a[href$="com"]'))
+        {
+            alert("The reference :"+ele.href)
+        }
+
+        let course=document.querySelector('.html')
+        alert(course.closest('.UI'));//ul
+        alert(course.closest('.contents'))//div
+        alert(course.closest('h1'))
+
+
+</script>

@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>
+            Tables with CSS
+        </title>
+        <style>
+            table
+            {
+                border-collapse: separate;
+                /* border-spacing: 15px; */
+                width: 100%;
+                table-layout: fixed;
+            }
+            table.empty-show
+            {
+                empty-cells: show;
+            }
+            table.empty-hide
+            {
+                empty-cells: hide;
+            }
+            th,td{
+                border: 1px solid chocolate;
+                padding: 8px;
+            }
+            th{
+                height: 40px;
+                text-align: center;
+                vertical-align: top;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h2>Student Details are:</h2>
+        <table>
+            <tr>
+                <th>Sno</th>
+                <th>Name</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Swetha</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Ram</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Somesh</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Abhimanyu</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Anurag</td>
+            </tr>
+
+        </table>
+        <h2>Table Show</h2>
+        <table class="empty-show">
+            <tr>
+                <th>Sno</th>
+                <th>Name</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Swetha</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td></td>
+            </tr>
+        </table>
+        <h2>Table Hide</h2>
+        <table class="empty-hide">
+            <tr>
+                <th>Sno</th>
+                <th>Name</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Swetha</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td></td>
+            </tr>
+        </table>
+
+
+    </body>
+</html>

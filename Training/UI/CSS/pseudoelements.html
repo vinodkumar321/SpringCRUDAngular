@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>
+        Pseudo-Elements
+    </title>
+    <style>
+        p::first-line {
+            color: green;
+            font-variant: small-caps;
+        }
+        p::first-letter {
+            color: tomato;
+            font-variant: small-caps;
+        }
+        h1::before
+        {
+            content: url("bullet-list-icon-2.jpg");
+        }
+        h1::after
+        {
+            content: url("Tulips.jpg")
+        }
+        p.art::first-letter
+        {
+            color: yellow;
+            font-size: xx-large;
+        }
+
+        </style>
+    </head>
+    <body>
+        <p>Seeds School, an exclusive primary school promoted by The Creek Group. <br>
+            Faculty that encourage the development of each child, by providing security and warmth.
+        </p>
+        <h1>
+            Pseusdo Elements Example
+        </h1>
+        <p class="art">Its suppoerted in IE8 and above versions</p>
+
+    </body>
+</html>

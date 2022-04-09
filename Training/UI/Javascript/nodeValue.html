@@ -1,0 +1,22 @@
+<!-- text nodes: node value and node data -->
+<body>
+    Welcome
+    <div hidden>Hidden Example</div>
+    <div id="ex">Hiding the element</div>
+    <div id="msg">Element is hidden or not</div>
+        <h1>Welcome to text nodes</h1>
+        <p> text nodes have node value and data</p>
+    </div>
+    <script>
+        let text=document.body.firstChild;
+        alert(text.data)
+
+        let comment=text.nextSibling;
+        alert(comment.data)
+
+        ex.hidden=false;
+
+        alert(msg.textContent)
+        setInterval(() => msg.hidden = !msg.hidden,1000); //bilinking 
+    </script>
+</body>

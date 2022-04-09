@@ -1,0 +1,5 @@
+package com.jocata.las.repository;
+
+public class CustomerRepository {
+
+}

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<script src="Clock.js"></script>
+<script src="extendedclock.js"></script>
+<script>
+    let resolutionclock=new ExtendedClock(
+        {
+            template:'h:m:s',
+            precision: 10000
+
+        }
+    );
+    resolutionclock.start();
+</script>

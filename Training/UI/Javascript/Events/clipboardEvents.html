@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<body>
+<input type="text" id="input">
+<script>
+    input.onpaste=function(event)
+    {
+        alert("Paste : "+event.clipboardData.getData('text/plain'));
+        // event.preventDefault();
+    };
+
+    input.oncut=input.oncopy=function(event)
+    {
+        alert(event.type+' - '+document.getSelection());
+        // event.preventDefault();
+    };
+</script>
+</body>

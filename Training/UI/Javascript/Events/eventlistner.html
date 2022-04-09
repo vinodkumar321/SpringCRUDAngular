@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<body>
+    <input id="ele" type="button" value="Click">
+    <script>
+        function event1()
+        {
+            alert("Clicked once")
+        };
+        function event2()
+        {
+            alert("Clicked twice")
+        };
+        ele.onclick=()=>alert("Hello");
+        ele.addEventListener("click",event1);
+        ele.addEventListener("click",event2);
+        ele.removeEventListener("click",event1);
+    </script>
+</body>

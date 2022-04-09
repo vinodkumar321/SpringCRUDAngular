@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<body>
+    <style>
+        .invalid{ border-color: red}
+        #error {color: red;}
+    </style>
+    Enter Email: <input type="email" id="input">
+    <div id="error"></div>
+    <script>
+        input.onblur=function()
+        {
+            if(!input.value.includes('@'))
+            {
+                input.classList.add('invalid');
+                error.innerHTML="Please enter a valid Email id";
+            }
+        };
+        input.onfocus=function()
+        {
+            if(this.classList.contains('invalid'))
+            {
+                this.classList.remove('invalid');
+                error.innerHTML=" ";
+            }
+        };
+    </script>
+</body>

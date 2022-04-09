@@ -1,0 +1,44 @@
+<script>
+    class Animal
+    {
+        constructor(name)
+        {
+            this.speed=0;
+            this.name=name;
+        }
+        run(speed)
+        {
+            this.speed=speed;
+            alert(`${this.name} runs with speed ${this.speed}.`)
+        }
+        stop()
+        {
+            this.speed=0;
+            alert(`${this.name} is standing still`)
+        }
+    }
+    class Vehicle
+    {
+        run(speed)
+        {
+            this.speed=speed;
+            alert(`${this.name} runs with speed ${this.speed}.`)
+        }
+        mileage()
+        {
+            alert("Check the mileage of the vehicle");
+        }
+
+    }
+    class Cheetah extends Animal,Vehicle
+    {
+        hunting(){
+            alert(`${this.name} hunts other deer`);
+        }
+    }
+    let ch=new Cheetah("Cheetah");
+    ch.run(1000);
+    ch.stop();
+    ch.hunting();
+    ch.mileage();
+</script>

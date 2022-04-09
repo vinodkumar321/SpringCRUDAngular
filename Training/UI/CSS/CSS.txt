@@ -1,0 +1,213 @@
+HTML : static pages
+Multiple pages --> repeatedly add the code in every single page
+
+separation between presentation and content
+
+CSS:
+Cascading Style sheets
+--> describing presentation
+--> 1996 
+
+Advantages:
+--> Save time
+--> Easy maintainance 
+--> Pages loaded faster
+--> Superior styles to HTML
+--> Multiple device compatibilty
+
+Including CSS in HTML:
+
+1. Inline styles : style as an attribute in the start tag
+2. Embedded styles: <style> element in the head section
+3. External style sheets: <link> element , pointing to an external css file
+
+Hexadecimal format :
+0-F
+
+0-255
+Primary --> RGB
+#000000 --> Black
+#FFFFFF --> White
+#FF0000 --> Red
+#0000FF --> Blue
+
+CSS Syntax:
+Set of rules
+CSS rule two parts
+1. selector
+2. declaration
+
+h1{ color: red; text-align:center;}
+
+h1 --> selector
+
+declarations
+1. color --> property red --> value
+2. text-align --> property center --> value
+
+{} --> group of declarations 
+:  --> separtion of property and value
+;  --> termination of a declaration
+
+Comments : 
+/* --- */
+<!-- ****** -->
+
+Selector:
+Pattern to match an element
+
+Universal Selector:
+Denoted by * --> match with every element 
+
+Example:
+*
+{
+margin: 0;
+padding:0;
+}
+
+Element type selector:
+p
+{
+color: green;
+}
+
+Id selector:
+#error -->attribute set to an element
+{
+color:red;
+}
+
+class selector:
+.blue --> element attribute is class 
+{
+color:blue;
+}
+
+descendant selectors:
+ul.menu li a
+{
+text-decoration : none;
+}
+h1 em
+{
+color:green;
+
+child selectors:
+ul > li
+{
+list-style: square;
+}
+
+Adjacent sibling selectors
+h1 + p --> both the elements at same level
+{
+color:blue;
+font-size : 16px;
+}
+
+<h1>
+<p>
+
+General sibling selectors:
+h1 ~ p
+{
+color:blue/#0000FF;
+font-size : 16px;
+}
+
+
+Grouping selectors:
+h1,h2,h3
+{
+font-weight:normal;
+}
+h1{
+font-size:30px;
+}
+h2{
+font-size:28px;
+}
+h3{
+font-size:26px;
+}
+
+
+Color Property on borders and outlines
+p.one
+{
+color:#0000ff;
+border:2px solid;
+}
+p.two
+{
+color:#00ff00;
+outline:2px solid;
+}
+
+Background:
+properties -- color,image,repeat,attachment,position
+
+Font :
+properties -- family,style,weight,size,variant
+family --> serif,sans-serif,monospace,cursive and fantasy
+
+Text:
+properties -- align,decoration,transform, indent,height,letter-spacing,word-spacing
+
+Links:
+Four states:
+a:link
+a:visited
+a:hover
+a:active
+
+Tables:
+Table
+table heading
+table data
+
+
+Box:
+Width : width + padding-left + padding-right + border-left +border-right+ margin-left+margin-right
+height : height + padding-top + padding-bottom + border-top +border-bottom+ margin-top+margin-bottom
+
+pseudo elements:
+selector::pseudo-element{property:value;} 
+p::first-line
+{
+color: green;
+font-variant: small-caps;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

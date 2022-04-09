@@ -1,0 +1,23 @@
+<table id="table">
+    <tr>
+        <td>Age</td>
+        <td><label><input type="radio" name="age" value="minor" checked>Age between 1-17</label></td>
+        <td><label><input type="radio" name="age" value="major">Age greater than or equal to 18</label></td>
+    </tr>
+</table>
+<form name="myform">
+    <div class="big form">BigForm</div>
+    <div class="short form">shortForm</div>
+</form>
+<script>
+    let inputs=table.getElementsByTagName('input');
+    for(let input of inputs)
+    {
+        alert(input.value+': '+input.checked)
+    }
+    let form=document.getElementsByName('myform')[0];
+        alert("Form value is "+form)
+    
+    let classname=document.getElementsByClassName('form');
+        alert("Class value is "+classname.length)
+</script>

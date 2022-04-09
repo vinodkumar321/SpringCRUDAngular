@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<body>
+    <script>
+        window.onload=function()
+        {
+            alert('Page is loaded')
+        }
+
+        window.onbeforeunload=function()
+        {
+            return "Save the changes made";
+        }
+        window.addEventListener("beforeunload",(event)=>{
+            event.preventDefault();
+        });
+    </script>
+</body>

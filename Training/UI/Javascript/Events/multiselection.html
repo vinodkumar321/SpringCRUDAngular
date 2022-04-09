@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<body>
+    <select  id="fruits" multiple>
+        <option value="apple" selected>Apple</option>
+        <option value="pineapple" selected>PineApple</option>
+        <option value="kiwi">Kiwi</option>
+        <option value="litche">Litche</option>
+    </select>
+    <script>
+        let selected=Array.from(fruits.options)
+            .filter(option => option.selected)
+            .map(option => option.value)
+            alert(selected)
+
+    </script>
+</body>

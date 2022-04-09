@@ -1,0 +1,48 @@
+package com.jocata.las.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.jocata.las.entity.CustomerDetails;
+import com.jocata.las.repository.CustomerRepository;
+import com.jocata.las.request.CustomerDetailsRequestResponse;
+import com.jocata.las.service.CustomerDetailsService;
+@CrossOrigin(origins = "http://localhost:4200")
+@RestController
+public class CustomerDetailsController {
+	
+	@Autowired
+	CustomerRepository customerRepository;
+	CustomerDetailsService customerService;
+	/*
+	@Autowired
+	CreateLeadService createLeadService;
+	*/
+	@PostMapping("/saveCustomerDetails")
+	public ResponseEntity<?> saveCustomerDetails(@RequestBody CustomerDetailsRequestResponse request){
+	
+		request = customerService.saveCustomerDetails(request);	//response contains new PK
+		
+		return new ResponseEntity<CustomerDetailsRequestResponse>(request, HttpStatus.ACCEPTED);
+	}
+	
+	@GetMapping("/getCustomerDetails")
+	public ResponseEntity<?> getCustomerDetails(@RequestBody CustomerDetailsRequestResponse request){
+	    request = customerService.getCustomerDetails(request.getAppId());		
+		return new ResponseEntity<CustomerDetailsRequestResponse>(request, HttpStatus.ACCEPTED);
+	}
+	
+	
+	@GetMapping("/getCustomerDetailsAll")
+	public List<CustomerDetails> getCustomerDetailsAll(){
+		  return this.customerRepository.findAll(); 
+	  }
+}

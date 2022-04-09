@@ -1,0 +1,82 @@
+!SESSION 2022-04-07 16:41:09.798 -----------------------------------------------
+eclipse.buildId=4.14.0.202203131612
+java.version=17.0.2
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+This is a continuation of log file /home/vinod/Documents/jocata/java/Spring/.metadata/.bak_0.log
+Created Time: 2022-04-09 19:38:23.621
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-09 19:38:23.622
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-09 19:38:23.622
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-09 19:38:23.622
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-09 19:38:23.623
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-09 19:38:23.624
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.sGvwUgsC => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-09 19:38:24.100
+!MESSAGE classpath=153 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-09 19:38:24.101
+!MESSAGE buffering callback sts4.classpath.sGvwUgsC TCLLAS false 153
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-09 19:38:24.101
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-09 19:38:24.264
+!MESSAGE classpath=159 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-09 19:38:24.265
+!MESSAGE buffering callback sts4.classpath.sGvwUgsC TCLClientService false 159
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-09 19:38:24.265
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-09 19:38:24.267
+!MESSAGE classpath=163 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-09 19:38:24.268
+!MESSAGE buffering callback sts4.classpath.sGvwUgsC TCLCoreService false 163
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-09 19:38:24.268
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-09 19:38:24.270
+!MESSAGE classpath=154 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-09 19:38:24.271
+!MESSAGE buffering callback sts4.classpath.sGvwUgsC TCLDataLoader false 154
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-09 19:38:24.271
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-09 19:38:24.273
+!MESSAGE classpath=159 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-09 19:38:24.273
+!MESSAGE buffering callback sts4.classpath.sGvwUgsC TCLDelegatorService false 159
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-09 19:38:24.274
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-09 19:38:24.276
+!MESSAGE classpath=128 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-09 19:38:24.276
+!MESSAGE buffering callback sts4.classpath.sGvwUgsC TCLUtils false 128
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-09 19:38:24.277
+!MESSAGE executing callback sts4.classpath.sGvwUgsC 6 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-04-09 19:38:25.102
+!MESSAGE executing callback sts4.classpath.sGvwUgsC SUCCESS [done]

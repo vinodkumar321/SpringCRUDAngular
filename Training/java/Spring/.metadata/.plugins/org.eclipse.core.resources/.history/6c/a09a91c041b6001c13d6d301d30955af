@@ -1,0 +1,5 @@
+package com.jocata.tcl.utils.request;
+
+public @interface CustomerDetailsRequestResponse {
+
+}

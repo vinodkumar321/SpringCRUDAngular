@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<body>
+    <button data-toggle-id="email">Show or hide the email id</button>
+    <form id="email" hidden>
+        Enter Email:<input type="email">
+    </form>
+    <script>
+        document.addEventListener('click',function(event)
+        {
+            let id=event.target.dataset.toggleId;
+            if(!id) return;
+            let ele=document.getElementById(id);
+            ele.hidden = !ele.hidden;
+
+        });
+    </script>
+</body>

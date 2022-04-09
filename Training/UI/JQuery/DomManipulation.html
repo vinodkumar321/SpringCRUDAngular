@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Example of JQuery</title>
+        <script src="jquery-3.6.0.js"></script>
+        <script>
+            $(document).ready(function()
+            {
+                $('#div1').after('<div style="background-color:green">After Division</div>');
+                $('#div2').before('<div style="background-color:Yellow">Before Division</div>');
+                $('#div').prepend('<p> Prepend the text in the paragraph</p>');
+                $('label').remove();
+                $('<span>This is a span</span>').replaceAll('p');
+                $('span').wrap('<p></p>');
+
+            });
+        </script>
+        <style>
+            div{
+                border: 1px salmon;
+                background-color: skyblue;
+                margin: 2px 0 2px 0;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <h1>DOM Manipulation Methods Example</h1>
+        <div id="div"><label>This is a division for prepend</label></div>
+        <div id="div1"><p>This are Dom Methods</p></div>
+        <div id="div2">div2</div>
+        <span>This is a span</span>
+
+    </body>
+</html>
