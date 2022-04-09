@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <title>
+             User Registration Form
+        </title>
+        
+         <style>
+               div {
+                 background-color: chartreuse;
+                 font-family: 'Courier New', Courier, monospace;
+                 margin:5%;
+               }
+
+               input,select {
+                   
+                   margin:1%;
+                   padding:1%;
+                   font-family: verdana;
+                   font-size: 20px;
+               }
+
+               input#dob{
+                  width:24%;
+               }
+
+               input#submit{
+                  margin: auto;
+                  display: block;
+               }
+               select {
+                 width:27%;
+               }
+        </style>
+
+  </head>
+  <body>
+    <div >
+        <form #addForm = "ngForm">
+          <input type="text" id="mobileNumber" placeholder="Contact Number" [(ngModel)]="user.mobilenumber" name="mobilenumber"> 
+          <input type="text" id="pannumber" placeholder="PAN Number" [(ngModel)]="user.pannumber" name="pannumber">  
+          <input type="text" id="fName" placeholder="First Name" [(ngModel)]="user.firstname" name="fName">
+          <input type="text" id="mName" placeholder="Middle Name" [(ngModel)]="user.middlename" name="mName">
+          <input type="text" id="lName" placeholder="Last Name" [(ngModel)]="user.lastname" name="lName">
+          <input type="text" id="faName" placeholder="Father Name" [(ngModel)]="user.fathername" name="faName"><br>
+          <input type="text" id="email" placeholder="Email" [(ngModel)]="user.personalemail" name="email"> 
+          <select name="gender" id="gender" [(ngModel)]="user.gender" name="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+            </select>
+            <input type="date" id="dob" placeholder="Date of Birth" [(ngModel)]="user.dob" name="dob"><br>
+            <input type="text" id="pincode" placeholder="Pincode" [(ngModel)]="user.pincode" name="pincode">
+            <input type="text" id="kyccity" placeholder="City" [(ngModel)]="user.kyccity" name="city">
+            <input type="text" id="kycstate" placeholder="State" [(ngModel)]="user.kycstate" name="state"><br><br>
+            <input type="submit" value="Register Me" id="submit" (click)="registerNow()"><br><br>
+        </form>
+           
+      </div>    
+  </body>
+</html>

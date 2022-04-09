@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <title>
+                Fetch Customer Details
+        </title>
+        
+         <style>
+               div {
+                 background-color: chartreuse;
+                 font-family: 'Courier New', Courier, monospace;
+               }
+
+               input,select {
+                   
+                   margin:1%;
+                   padding:1%;
+                   font-family: verdana;
+                   font-size: 25px;
+               }
+
+               input#dob{
+                  width:24%;
+               }
+
+               input#submit, input#appId {
+                  margin: auto;
+                  display: block;
+               } 
+               select {
+                 width:27%;
+               }
+
+               table,tr {
+                      background-color:darkorange;
+                      width:100%;
+                      border-collapse:collapse;
+                      font-size: medium;
+               }
+
+                table th,table td {
+              
+                border:1px solid black;
+                
+               }
+        </style>
+
+  </head>
+  <body>
+    <div >
+      
+           <form #addForm = "ngForm">
+                <input type="text" style="text-align: center;" id="appId" placeholder="Customer Id" [(ngModel)]="appId" name="appId">    
+                <input type="submit" value="Fetch Customer Details By Id" id="submit" (click)="updateDataByCustomerId()"><br>
+                <input type="text" id="mobileNumber" placeholder="Contact Number" [(ngModel)]="user.mobilenumber" [value]="user.mobilenumber" name="mobilenumber"> 
+          <input type="text" id="pannumber" placeholder="PAN Number" [(ngModel)]="user.pannumber" [value]="user.pannumber" name="pannumber">  
+          <input type="text" id="fName" placeholder="First Name" [(ngModel)]="user.firstname" [value]="user.firstname" name="fName">
+          <input type="text" id="mName" placeholder="Middle Name" [(ngModel)]="user.middlename" [value]="user.middlename" name="mName">
+          <input type="text" id="lName" placeholder="Last Name" [(ngModel)]="user.lastname" [value]="user.lastname" name="lName">
+          <input type="text" id="faName" placeholder="Father Name" [(ngModel)]="user.fathername" [value]="user.fathername" name="faName"><br>
+          <input type="text" id="email" placeholder="Email" [(ngModel)]="user.personalemail" [value]="user.personalemail" name="email"> 
+          <select name="gender" id="gender" [(ngModel)]="user.gender" [value]="user.gender" name="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+            </select>
+            <input type="date" id="dob" placeholder="Date of Birth" [(ngModel)]="user.dob"  [value]="user.dob" name="dob"><br>
+            <input type="text" id="pincode" placeholder="Pincode" [(ngModel)]="user.pincode" [value]="user.pincode" name="pincode">
+            <input type="text" id="kyccity" placeholder="user.kyccity" [(ngModel)]="user.kyccity" [value]="user.kyccity" name="city">
+            <input type="text" id="kycstate" placeholder="State"  [(ngModel)]="user.kycstate"   [value]="user.kycstate" name="state"><br><br>
+            <input type="submit" value="Update Details" id="submit" (click)="updateDetailsById()"><br><br>            
+             </form>   
+      </div>    
+  </body>
+</html>
+
+
